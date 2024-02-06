@@ -6,26 +6,30 @@
  */
 
 const add = (num1, num2, success, fail) => {
-    setTimeout( () => {
-        if(num1 > 10 || num2 > 10){
+    setTimeout(() => {
+        if (num1 > 10 || num2 > 10) {
             fail("numbers are too big!");
-        } else {
+        }
+        else {
             const result = num1 + num2;
-            success(`The result is : ${result}`);
+            success(result);
         }
     }, 2000);
 }
 
+
 const factorial = (num, success, fail) => {
-    setTimeout( () => {
+    setTimeout(() => {
         let result = 1;
-        if(number < 0){
+        if (num < 0) {
             fail("Number is too small!");
-        } else {
-            for(let i = 1; i <= num; i++){
+        }
+        else {
+            for (let i = 1; i <= num; i++) {
                 result = result * i;
             }
-            success(`The result is : ${result}`);
+            success(result);
         }
+
     }, 2000);
 }
